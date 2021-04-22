@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-back-button slot="start" defaultHref='home'></ion-back-button>
+    <ion-title>cart</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item *ngFor="let item of cart;let i=index">
+    <ion-label>{{item.title}}</ion-label>
+    <ion-label>BD {{item.price}}</ion-label>
+    <ion-button color="danger" (click)="delete(i)">Delete</ion-button>
+  </ion-item>
+  <ion-button (click)="total()">Calculate Total</ion-button>
+</ion-content>

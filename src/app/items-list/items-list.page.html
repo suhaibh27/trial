@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-back-button slot="start" defaultHref='home'></ion-back-button>
+    <ion-title>items list</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item >
+    <ion-label>title</ion-label>
+    <ion-label>description</ion-label>
+    <ion-label>price</ion-label>
+  </ion-item>
+  <ion-item *ngFor="let item of items;let i=index">
+    <ion-label>{{item.title}}</ion-label>
+    <ion-label>&nbsp; &nbsp; &nbsp; &nbsp;{{item.description}}</ion-label>
+    <ion-label>&nbsp; &nbsp; &nbsp; &nbsp;BD{{item.price}}</ion-label>
+    <ion-button (click)="order(i)">Order</ion-button>
+  </ion-item>
+</ion-content>

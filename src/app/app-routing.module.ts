@@ -11,6 +11,18 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'add-new-item',
+    loadChildren: () => import('./add-new-item/add-new-item.module').then( m => m.AddNewItemPageModule)
+  },
+  {
+    path: 'items-list',
+    loadChildren: () => import('./items-list/items-list.module').then( m => m.ItemsListPageModule)
+  },
+  {
+    path: 'cart',
+    loadChildren: () => import('./cart/cart.module').then( m => m.CartPageModule)
+  },
 ];
 
 @NgModule({
